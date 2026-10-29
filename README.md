@@ -2,7 +2,7 @@
 
 Página web sobre boxeo, desarrollada como proyecto académico de desarrollo web. Incluye una introducción al deporte, una galería de imágenes y una sección de comentarios conectada a un backend en Node.js.
 
-**Sitio publicado:** [enlace de Netlify]
+**Sitio publicado:** https://roundocho.netlify.app
 
 ## Funcionalidades
 
