@@ -1,0 +1,65 @@
+<!-- ===== COMENTARIOS ===== -->
+<section class="seccion" id="comentarios">
+  <div class="contenedor">
+    <header class="seccion__encabezado revelar">
+      <span class="seccion__numero">03</span>
+      <h2 class="seccion__titulo">Comen<span>tarios</span></h2>
+      <p class="seccion__subtitulo">Cuéntanos tu experiencia con el boxeo</p>
+    </header>
+
+    <div class="comentarios">
+      <form class="formulario revelar" id="formComentario" novalidate>
+        <div class="campo">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" maxlength="50" placeholder="Tu nombre" required>
+          <small class="campo__error" id="errorNombre"></small>
+        </div>
+
+        <div class="campo">
+          <label for="email">Correo <span class="opcional">(opcional, no se publica)</span></label>
+          <input type="email" id="email" name="email" maxlength="100" placeholder="tucorreo@ejemplo.com">
+          <small class="campo__error" id="errorEmail"></small>
+        </div>
+
+        <div class="campo">
+          <span class="label">Calificación</span>
+          <div class="estrellas" id="estrellas" role="radiogroup" aria-label="Calificación">
+            <button type="button" data-valor="1" aria-label="1 estrella">★</button>
+            <button type="button" data-valor="2" aria-label="2 estrellas">★</button>
+            <button type="button" data-valor="3" aria-label="3 estrellas">★</button>
+            <button type="button" data-valor="4" aria-label="4 estrellas">★</button>
+            <button type="button" data-valor="5" aria-label="5 estrellas">★</button>
+          </div>
+          <input type="hidden" id="calificacion" name="calificacion" value="0">
+          <small class="campo__error" id="errorCalificacion"></small>
+        </div>
+
+        <div class="campo">
+          <label for="mensaje">Comentario</label>
+          <textarea id="mensaje" name="mensaje" rows="5" maxlength="500" placeholder="Escribe tu comentario..." required></textarea>
+          <div class="campo__pie">
+            <small class="campo__error" id="errorMensaje"></small>
+            <small class="contador" id="contador">0 / 500</small>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn--rojo btn--bloque" id="btnEnviar">
+          <span class="btn__texto">Publicar comentario</span>
+          <span class="btn__cargando" aria-hidden="true"></span>
+        </button>
+
+        <p class="formulario__estado" id="estadoForm" role="status"></p>
+      </form>
+
+      <div class="lista-comentarios revelar">
+        <div class="lista-comentarios__cabecera">
+          <h3>Lo que dice la comunidad</h3>
+          <span class="badge" id="totalComentarios">0</span>
+        </div>
+        <div id="listaComentarios" class="lista-comentarios__items">
+          <p class="mensaje-vacio">Cargando comentarios...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

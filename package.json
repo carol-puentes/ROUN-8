@@ -1,0 +1,17 @@
+{
+  "name": "round8",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "netlify build",
+    "deploy": "netlify deploy --prod"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^11.1.7"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

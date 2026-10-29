@@ -1,0 +1,117 @@
+/* ===== COMENTARIOS ===== */
+
+.comentarios { display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; align-items: start; }
+
+/* ---------- Formulario ---------- */
+.formulario {
+  background: var(--gris-1);
+  padding: 2.5rem;
+  border-radius: var(--radio);
+  border-top: 4px solid var(--rojo);
+  position: sticky;
+  top: calc(var(--alto-header) + 1rem);
+}
+
+.campo { margin-bottom: 1.4rem; }
+
+.campo label, .campo .label {
+  display: block;
+  font-size: .85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: .5rem;
+}
+.opcional { text-transform: none; font-weight: 400; color: var(--texto-suave); letter-spacing: 0; }
+
+.campo input, .campo textarea {
+  width: 100%;
+  padding: .9rem 1rem;
+  background: var(--negro);
+  border: 1px solid var(--gris-3);
+  border-radius: var(--radio);
+  color: var(--texto);
+  font: inherit;
+  resize: vertical;
+  transition: var(--transicion);
+}
+.campo input:focus, .campo textarea:focus { outline: none; border-color: var(--rojo); box-shadow: 0 0 0 3px var(--rojo-brillo); }
+.campo.invalido input, .campo.invalido textarea { border-color: var(--rojo); }
+
+.campo__error { color: #ff5c75; font-size: .8rem; min-height: 1em; display: block; margin-top: .3rem; }
+.campo__pie { display: flex; justify-content: space-between; gap: 1rem; }
+.contador { color: var(--texto-suave); font-size: .8rem; margin-top: .3rem; white-space: nowrap; }
+
+/* ---------- Estrellas ---------- */
+.estrellas { display: flex; gap: .3rem; }
+.estrellas button { font-size: 1.8rem; color: var(--gris-3); transition: color .15s, transform .15s; line-height: 1; }
+.estrellas button:hover { transform: scale(1.15); }
+.estrellas button.activa { color: var(--rojo); }
+
+/* ---------- Botón cargando y estado ---------- */
+.btn__cargando {
+  display: none;
+  width: 18px; height: 18px;
+  border: 2px solid rgba(255,255,255,.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: girar .8s linear infinite;
+}
+.btn.cargando .btn__cargando { display: inline-block; }
+
+.formulario__estado { margin-top: 1rem; font-size: .9rem; text-align: center; min-height: 1.4em; }
+.formulario__estado.exito { color: var(--exito); }
+.formulario__estado.error { color: #ff5c75; }
+
+/* ---------- Lista de comentarios ---------- */
+.lista-comentarios__cabecera {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 1.5rem; padding-bottom: 1rem;
+  border-bottom: 1px solid var(--gris-2);
+}
+.lista-comentarios__cabecera h3 { font-family: var(--fuente-titulo); font-size: 1.8rem; letter-spacing: 1.5px; }
+
+.badge { background: var(--rojo); color: #fff; font-weight: 700; padding: .2rem .8rem; border-radius: 20px; font-size: .9rem; }
+
+.lista-comentarios__items { display: flex; flex-direction: column; gap: 1rem; max-height: 720px; overflow-y: auto; padding-right: .5rem; }
+
+.lista-comentarios__items::-webkit-scrollbar { width: 6px; }
+.lista-comentarios__items::-webkit-scrollbar-thumb { background: var(--gris-3); border-radius: 3px; }
+
+.comentario {
+  background: var(--gris-1);
+  padding: 1.4rem;
+  border-radius: var(--radio);
+  border-left: 3px solid var(--gris-3);
+  transition: var(--transicion);
+  animation: aparecer .5s ease both;
+}
+.comentario:hover { border-left-color: var(--rojo); }
+
+.comentario__cabecera { display: flex; align-items: center; gap: .9rem; margin-bottom: .7rem; }
+
+.comentario__avatar {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: var(--rojo);
+  display: grid; place-items: center;
+  font-family: var(--fuente-titulo);
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.comentario__nombre { font-weight: 600; }
+.comentario__fecha { font-size: .8rem; color: var(--texto-suave); }
+.comentario__estrellas { margin-left: auto; color: var(--rojo); letter-spacing: 2px; font-size: .9rem; }
+.comentario__texto { color: #cfcfcf; word-wrap: break-word; white-space: pre-line; }
+
+.mensaje-vacio { color: var(--texto-suave); text-align: center; padding: 3rem 1rem; background: var(--gris-1); border-radius: var(--radio); }
+
+@media (max-width: 900px) {
+  .comentarios { grid-template-columns: 1fr; gap: 2.5rem; }
+  .formulario { position: static; }
+}
+
+@media (max-width: 768px) {
+  .formulario { padding: 1.8rem; }
+}

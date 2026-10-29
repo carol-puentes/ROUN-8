@@ -1,0 +1,75 @@
+/* ===== EL BOXEO (INTRODUCCIÓN) ===== */
+
+.subtitulo-bloque {
+  font-family: var(--fuente-titulo);
+  font-size: 2rem;
+  letter-spacing: 2px;
+  margin: 5rem 0 2rem;
+  padding-left: 1rem;
+  border-left: 4px solid var(--rojo);
+}
+
+/* ---------- Intro ---------- */
+.intro { display: grid; grid-template-columns: 1.4fr 1fr; gap: 4rem; align-items: center; }
+.intro__texto p { margin-bottom: 1.2rem; color: #cfcfcf; font-size: 1.05rem; }
+.intro__texto strong { color: var(--rojo); }
+
+/* ---------- Estadísticas ---------- */
+.stats { display: grid; gap: 1rem; }
+
+.stat {
+  background: var(--gris-1);
+  border-left: 4px solid var(--rojo);
+  padding: 1.5rem;
+  border-radius: var(--radio);
+  transition: var(--transicion);
+}
+.stat:hover { transform: translateX(8px); background: var(--gris-2); }
+
+.stat__numero { display: block; font-family: var(--fuente-titulo); font-size: 3rem; line-height: 1; color: var(--rojo); }
+.stat__texto { color: var(--texto-suave); font-size: .9rem; text-transform: uppercase; letter-spacing: 1px; }
+
+/* ---------- Tarjetas de golpes ---------- */
+.tarjetas { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+
+.tarjeta {
+  background: var(--gris-1);
+  padding: 2rem;
+  border-radius: var(--radio);
+  border: 1px solid var(--gris-2);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transicion);
+}
+
+.tarjeta::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: var(--rojo);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transicion);
+}
+
+.tarjeta:hover { transform: translateY(-6px); border-color: var(--gris-3); box-shadow: 0 12px 30px rgba(0,0,0,.5); }
+.tarjeta:hover::before { transform: scaleX(1); }
+
+.tarjeta__icono { font-family: var(--fuente-titulo); font-size: 1.2rem; color: var(--rojo); }
+.tarjeta__titulo { font-family: var(--fuente-titulo); font-size: 2rem; letter-spacing: 2px; margin: .3rem 0 .8rem; }
+.tarjeta p { color: var(--texto-suave); font-size: .95rem; }
+
+/* ---------- Valores ---------- */
+.valores { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+.valores li {
+  background: var(--gris-1);
+  padding: 1.2rem 1.5rem;
+  border-radius: var(--radio);
+  color: var(--texto-suave);
+}
+.valores strong { color: var(--texto); }
+
+@media (max-width: 900px) {
+  .intro { grid-template-columns: 1fr; gap: 2.5rem; }
+}

@@ -1,0 +1,14 @@
+/* ===== FOOTER ===== */
+
+.footer { background: var(--negro-2); border-top: 1px solid var(--gris-2); padding: 2rem 0; }
+.footer__contenido { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.footer p { color: var(--texto-suave); font-size: .9rem; }
+
+.footer__arriba {
+  width: 42px; height: 42px;
+  display: grid; place-items: center;
+  border: 1px solid var(--gris-3);
+  border-radius: 50%;
+  transition: var(--transicion);
+}
+.footer__arriba:hover { background: var(--rojo); border-color: var(--rojo); }

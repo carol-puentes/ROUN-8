@@ -1,0 +1,22 @@
+# Dependencias (Netlify las instala solo a partir de package.json)
+node_modules/
+
+# Archivos locales de Netlify CLI (incluye los comentarios guardados en local)
+.netlify/
+
+# Variables de entorno y secretos
+.env
+.env.*
+
+# Logs
+npm-debug.log*
+*.log
+
+# Sistema operativo y editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Archivos para borrar
+_to_delete/

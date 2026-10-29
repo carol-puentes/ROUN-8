@@ -1,0 +1,63 @@
+<!-- ===== GALERÍA ===== -->
+<section class="seccion seccion--oscura" id="galeria">
+  <div class="contenedor">
+    <header class="seccion__encabezado revelar">
+      <span class="seccion__numero">02</span>
+      <h2 class="seccion__titulo">Galería</h2>
+      <p class="seccion__subtitulo">Momentos dentro y fuera del ring</p>
+    </header>
+
+    <div class="filtros revelar" role="tablist">
+      <button class="filtro activo" data-filtro="todos">Todos</button>
+      <button class="filtro" data-filtro="entrenamiento">Entrenamiento</button>
+      <button class="filtro" data-filtro="ring">Ring</button>
+      <button class="filtro" data-filtro="equipo">Equipo</button>
+    </div>
+
+    <div class="galeria" id="galeria-grid">
+      <figure class="galeria__item" data-categoria="entrenamiento">
+        <img src="img/gallery/heavy_bag.jpg" alt="Boxeador golpeando el saco pesado" loading="lazy">
+        <figcaption>Saco pesado</figcaption>
+      </figure>
+      <figure class="galeria__item galeria__item--alto" data-categoria="ring">
+        <img src="img/gallery/ring.jpg" alt="Ring de boxeo iluminado" loading="lazy">
+        <figcaption>El ring</figcaption>
+      </figure>
+      <figure class="galeria__item" data-categoria="equipo">
+        <img src="img/gallery/gloves.jpg" alt="Guantes de boxeo rojos" loading="lazy">
+        <figcaption>Guantes</figcaption>
+      </figure>
+      <figure class="galeria__item" data-categoria="entrenamiento">
+        <img src="img/gallery/mittens.jpg" alt="Entrenamiento con manoplas" loading="lazy">
+        <figcaption>Trabajo de manoplas</figcaption>
+      </figure>
+      <figure class="galeria__item galeria__item--ancho" data-categoria="ring">
+        <img src="img/gallery/sparring.jpg" alt="Sparring dentro del ring" loading="lazy">
+        <figcaption>Sparring</figcaption>
+      </figure>
+      <figure class="galeria__item" data-categoria="equipo">
+        <img src="img/gallery/vendaje.jpg" alt="Vendas para las manos" loading="lazy">
+        <figcaption>Vendaje</figcaption>
+      </figure>
+      <figure class="galeria__item" data-categoria="entrenamiento">
+        <img src="img/gallery/jump_rope.jpg" alt="Salto de cuerda" loading="lazy">
+        <figcaption>Salto de cuerda</figcaption>
+      </figure>
+      <figure class="galeria__item" data-categoria="ring">
+        <img src="img/gallery/corner.jpg" alt="Esquina del ring con cuerdas rojas" loading="lazy">
+        <figcaption>La esquina</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox: visor de imágenes a pantalla completa -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox__cerrar" id="lbCerrar" aria-label="Cerrar">&times;</button>
+  <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Anterior">&#10094;</button>
+  <figure class="lightbox__contenido">
+    <img id="lbImagen" src="" alt="">
+    <figcaption id="lbTexto"></figcaption>
+  </figure>
+  <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Siguiente">&#10095;</button>
+</div>
